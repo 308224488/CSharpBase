@@ -15,7 +15,7 @@ namespace CShapPrijectDemo_1
         public static void Main(string[] args)
         {
 
-            CanShu.OutCanShu();
+            WeiTuo.demo5();
 
         }
 

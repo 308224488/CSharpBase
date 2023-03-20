@@ -7,6 +7,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace CShapPrijectDemo_1
 {
@@ -78,7 +79,7 @@ namespace CShapPrijectDemo_1
             stu.name = "toy";
             Console.WriteLine("{0}{1}", stu.name.GetHashCode(), stu.name);
         }
-       public class stringTest
+        public class stringTest
         {
             public string name;
         }
@@ -93,7 +94,7 @@ namespace CShapPrijectDemo_1
         }
         public static void YinYongCanShu(ref int number)
         {
-            number=number+1;
+            number = number + 1;
             Console.WriteLine(number);
         }
         #endregion
@@ -101,28 +102,28 @@ namespace CShapPrijectDemo_1
         #region 引用类型的引用参数
 
         public static void demo4() {
-          stringTest stu = new stringTest();
+            stringTest stu = new stringTest();
             stu.name = "李遇";
-            Console.WriteLine("{0}{1}",stu.name.GetHashCode(),stu.name);
+            Console.WriteLine("{0}{1}", stu.name.GetHashCode(), stu.name);
             YinYongLeiXing(ref stu);
-            
+
             Console.WriteLine("{0}{1}", stu.name.GetHashCode(), stu.name);
             Console.ReadKey();
         }
         public static void YinYongLeiXing(ref stringTest numeber) {
             numeber.name = "礼遇";
-            Console.WriteLine("{0}{1}",numeber.name.GetHashCode(),numeber.name);
-        
+            Console.WriteLine("{0}{1}", numeber.name.GetHashCode(), numeber.name);
+
         }
         #endregion
 
         #region 输出参数
         public static void OutCanShu() {
             Console.WriteLine("请输入数字");
-            string  arg=Console.ReadLine();//获取输入的数字
+            string arg = Console.ReadLine();//获取输入的数字
             Double x = 0;
-            bool b1=double.TryParse(arg,out x);
-            if (b1==false)
+            bool b1 = double.TryParse(arg, out x);
+            if (b1 == false)
             {
                 Console.WriteLine("输入错误");
                 return;
@@ -137,10 +138,121 @@ namespace CShapPrijectDemo_1
                 return;
             }
             Double Z = x + y;
-            Console.WriteLine("输出的结果为:{0}+{1}={2}",x,y,Z);
+            Console.WriteLine("输出的结果为:{0}+{1}={2}", x, y, Z);
             Console.ReadKey();
         }
         #endregion
 
+        #region 数组参数
+        public static void demo5()
+        {
+            //声明一个数组
+            int[] arrayNumber = new int[] { 1, 2, 3, 4, 5 };
+            //使用params关键字以后不需要再声明数组，直接输入数组元素即可
+            int sum = arraySum(1, 2, 3, 4, 45, 3);
+            Console.WriteLine(sum);
+            Console.ReadKey();
+        }
+        public static void demo6() {
+            //字符串截取
+            string nameInfo = "李瑞博,董玉蓉！礼遇~";
+            string[] result = nameInfo.Split(',', '!', '~', '！');
+            foreach (string itme in result) {
+                Console.WriteLine(itme);
+            }
+            Console.ReadKey();
+        }
+        public static int arraySum(params int[] arrayNumber) {
+            //返回数组之和  
+            int number = 0;
+            foreach (var item in arrayNumber)
+            {
+                number += item;
+            }
+            return number;
+
+        }
+        #endregion
+
+        #region 具名参数
+        public static void demo7() {
+            //不具名参数
+            JuMing("礼遇", 3);
+            //具名参数
+            //优点:1、提高代码可读性.2不受参数列表顺序影响
+            JuMing(name: "礼遇", age: 4);
+            Console.ReadKey();
+
+        }
+        public static void JuMing(string name, int age) {
+            Console.WriteLine("您输入的名字为:{0},年龄:{1}", name, age);
+        }
+        #endregion
+
+        #region 可选参数
+        public static void demo8() {
+            // KeXuanCanShu();//未声明的情况下使用默认值
+            KeXuanCanShu(age: 2);
+            Console.ReadKey();
+
+        }
+        public static void KeXuanCanShu(string name = "礼遇", int age = 5)
+        {
+            Console.WriteLine("您输入的名字为:{0},年龄:{1}", name, age);
+        }
+        #endregion
+
+        #region 扩展方法（this参数）
+        public static void demo9() {
+            //方法必须是公有的，静态的 被public static所修饰
+            //必须是形参列表中的第一个，由this修饰
+
+            double x = 3.23454321;
+            double result = x.KuoZhanFangFa(3);
+            Console.WriteLine(result);
+            Console.ReadKey();
+        }
+
+        #endregion
+
+        #region Linq
+        //声明一个List集合 判断集合中的数字是否大于10
+        public static void demo10() {
+            List<int> number = new List<int>();
+            int[] number_ ={1,2,3,4,5,6,7,8 };
+            number.AddRange(number_);
+            //bool result = listTrueOrFalse(number);
+            //使用linq中的扩展方法
+            bool result = number.All(x => x>=5);  
+            Console.WriteLine(result);
+            Console.ReadKey();
+
+        }    
+        public static bool listTrueOrFalse(List<int> list) {
+            foreach (var item in list)
+            {
+                if (item>5)
+                {
+                    Console.WriteLine("{0}:{1}",item,false);
+                   
+                }
+                
+            }
+            return true;
+        }
+        #endregion
+
     }
+    #region 顶级静态类
+    static class KuoZhan
+    {
+        public static double KuoZhanFangFa(this double zhi, int index)
+        {
+            double result = Math.Round(zhi, index);
+            return result;
+        }
+    }
+    #endregion
+
+
 }
