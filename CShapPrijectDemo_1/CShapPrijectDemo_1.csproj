@@ -46,6 +46,7 @@
     <Compile Include="CanShu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WeiTuo.cs" />
     <Compile Include="ZiDuanShuXing.cs" />
   </ItemGroup>
   <ItemGroup>

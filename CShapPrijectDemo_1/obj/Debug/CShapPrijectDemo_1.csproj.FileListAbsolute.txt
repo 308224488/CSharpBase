@@ -6,3 +6,11 @@ D:\CShapBase\CShapPrijectDemo_1\obj\Debug\CShapPrijectDemo_1.csproj.SuggestedBin
 D:\CShapBase\CShapPrijectDemo_1\obj\Debug\CShapPrijectDemo_1.csproj.CoreCompileInputs.cache
 D:\CShapBase\CShapPrijectDemo_1\obj\Debug\CShapPrijectDemo_1.exe
 D:\CShapBase\CShapPrijectDemo_1\obj\Debug\CShapPrijectDemo_1.pdb
+C:\CShapBase\CShapPrijectDemo_1\bin\Debug\CShapPrijectDemo_1.exe.config
+C:\CShapBase\CShapPrijectDemo_1\bin\Debug\CShapPrijectDemo_1.exe
+C:\CShapBase\CShapPrijectDemo_1\bin\Debug\CShapPrijectDemo_1.pdb
+C:\CShapBase\CShapPrijectDemo_1\obj\Debug\CShapPrijectDemo_1.csproj.AssemblyReference.cache
+C:\CShapBase\CShapPrijectDemo_1\obj\Debug\CShapPrijectDemo_1.csproj.SuggestedBindingRedirects.cache
+C:\CShapBase\CShapPrijectDemo_1\obj\Debug\CShapPrijectDemo_1.csproj.CoreCompileInputs.cache
+C:\CShapBase\CShapPrijectDemo_1\obj\Debug\CShapPrijectDemo_1.exe
+C:\CShapBase\CShapPrijectDemo_1\obj\Debug\CShapPrijectDemo_1.pdb
