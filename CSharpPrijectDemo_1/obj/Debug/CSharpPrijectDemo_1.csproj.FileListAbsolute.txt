@@ -1,0 +1,8 @@
+D:\CShapBase\CShapPrijectDemo_1\bin\Debug\CShapPrijectDemo_1.exe.config
+D:\CShapBase\CShapPrijectDemo_1\bin\Debug\CShapPrijectDemo_1.exe
+D:\CShapBase\CShapPrijectDemo_1\bin\Debug\CShapPrijectDemo_1.pdb
+D:\CShapBase\CShapPrijectDemo_1\obj\Debug\CSharpPrijectDemo_1.csproj.AssemblyReference.cache
+D:\CShapBase\CShapPrijectDemo_1\obj\Debug\CSharpPrijectDemo_1.csproj.SuggestedBindingRedirects.cache
+D:\CShapBase\CShapPrijectDemo_1\obj\Debug\CSharpPrijectDemo_1.csproj.CoreCompileInputs.cache
+D:\CShapBase\CShapPrijectDemo_1\obj\Debug\CShapPrijectDemo_1.exe
+D:\CShapBase\CShapPrijectDemo_1\obj\Debug\CShapPrijectDemo_1.pdb
